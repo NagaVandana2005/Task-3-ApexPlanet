@@ -1,0 +1,95 @@
+/* ----------  Global reset  ---------- */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* ----------  Page basics  ---------- */
+body{
+  font-family:'Lucida Handwriting',cursive;
+  background:linear-gradient(to bottom,#e1bee7,#f8bbd0);
+  padding:20px;
+  color:#222;
+}
+
+/* ----------  Header ---------- */
+header{
+  background:linear-gradient(to right,#1e3c72,#2a5298);
+  color:white;
+  padding:50px 20px;
+  text-align:center;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.2);
+  margin-bottom:35px;
+}
+
+header h1{
+  font-size:2.7rem;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,#ffee58,#ff4081);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ----------  Content sections  ---------- */
+section{
+  border-radius:18px;
+  padding:28px;
+  margin-bottom:30px;
+  color:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+  transition:transform .3s ease;
+}
+section:hover{transform:translateY(-5px);}
+
+.section-blue   {background:linear-gradient(to right,#42a5f5,#1e88e5);}
+.section-purple {background:linear-gradient(to right,#8e24aa,#5e35b1);}
+.section-green  {background:linear-gradient(to right,#43cea2,#185a9d);}
+.section-orange {background:linear-gradient(to right,#ff9966,#ff5e62);}
+
+/* ----------  Typography  ---------- */
+h2{font-size:1.9rem;margin-bottom:12px;}
+p {font-size:1.05rem;line-height:1.6;}
+
+/* ----------  Buttons  ---------- */
+button{
+  background:linear-gradient(to right,#ff8a00,#e52e71);
+  color:#fff;
+  padding:12px 26px;
+  margin-top:15px;
+  border:none;
+  border-radius:14px;
+  font-weight:700;
+  font-size:1rem;
+  cursor:pointer;
+  transition:transform .2s,box-shadow .3s ease;
+  box-shadow:0 0 10px rgba(255,140,0,.5);
+}
+button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(255,140,0,.7);
+}
+
+/* ----------  Quiz radio buttons & result text  ---------- */
+input[type="radio"]{margin-right:8px;}
+.result-text{margin-top:10px;font-weight:bold;color:#fffde7;}
+
+/* ----------  Responsive tweaks  ---------- */
+@media(max-width:768px){
+  header h1{font-size:2.2rem;}
+  h2{font-size:1.6rem;}
+  button{width:100%;}
+}
+@media(max-width:480px){
+  h2{font-size:1.3rem;}
+  section{padding:20px;}
+  header h1{font-size:1.7rem;}
+}
+
+/* Hide interactive sections initially */
+.section-purple,
+.section-green,
+.section-orange {
+  display: none;
+}
